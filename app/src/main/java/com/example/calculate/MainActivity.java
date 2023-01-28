@@ -1,9 +1,13 @@
 package com.example.calculate;
 
+import static com.example.calculate.R.id.btn_next;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
+        Log.d("shamal", "onCreate: ");
+
+        //обработка клика
+        findViewById(btn_next).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            startActivity(intent);
+        });
     }
 
     public void OnNumberClick(View view) {
