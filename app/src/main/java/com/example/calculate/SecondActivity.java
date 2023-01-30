@@ -21,6 +21,8 @@ public class SecondActivity extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.g_text);
         textView.setText(getIntent().getStringExtra("result"));
+
+        //обработка красной кнопки
         Button redButton = findViewById(R.id.red_button);
         redButton.setOnClickListener(view -> {
             finishAffinity();

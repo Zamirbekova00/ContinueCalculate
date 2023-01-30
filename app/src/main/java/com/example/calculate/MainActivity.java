@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Boolean isOperationClick;
     private String operation;
     private Integer result;
+    private String text ;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -25,12 +27,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
-        Log.d("shamal", "onCreate: ");
+        Log.d("koko", "onCreate: ");
 
         //обработка клика
         findViewById(btn_next).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtra("result",result.toString());
             startActivity(intent);
+
+           // text = (String) ((TextView) findViewById(R.id.btn_equal)).getText().toString();
+
+            //  finish();
         });
     }
 
