@@ -20,4 +20,6 @@
     <string name="zero">0</string>
     <string name="dot">.</string>
     <string name="equals">=</string>
+    <string name="room">key1</string>
+    <string name="room1">key1</string>
 </resources>
